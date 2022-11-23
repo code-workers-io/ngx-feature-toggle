@@ -1,0 +1,18 @@
+{
+  "name": "@code-workers-io/ngx-feature-toggle",
+  "version": "1.1.0",
+  "peerDependencies": {
+    "@angular/common": "^14.2.0",
+    "@angular/core": "^14.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "description": "Lightweight library to enable/disable features in your Angular application for e.g. A/B testing",
+  "keywords": [
+    "angular",
+    "feature-toggle",
+    "A/B testing"
+  ],
+  "license": "MIT"
+}
