@@ -1,18 +1,25 @@
 import { TestBed } from '@angular/core/testing';
 
 import { NgxToggleFeatureGuard } from './ngx-toggle-feature.guard';
-import { FeatureList, FeatureProvider, NGX_FEATURE_PROVIDER } from '@mikelgo/ngx-feature-toggle';
 import { Injectable } from '@angular/core';
+import {
+  FeatureProvider,
+  NGX_FEATURE_PROVIDER,
+} from './feature-provider.token';
+import { FeatureList } from './models/feature-list';
 
 describe('NgxToggleFeatureGuard', () => {
   let guard: NgxToggleFeatureGuard;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [NgxToggleFeatureGuard,   {
-        provide: NGX_FEATURE_PROVIDER,
-        useExisting: TestProvider
-      },]
+      providers: [
+        NgxToggleFeatureGuard,
+        {
+          provide: NGX_FEATURE_PROVIDER,
+          useExisting: TestProvider,
+        },
+      ],
     });
     guard = TestBed.inject(NgxToggleFeatureGuard);
   });
@@ -22,7 +29,7 @@ describe('NgxToggleFeatureGuard', () => {
   });
 });
 
-@Injectable({providedIn: 'root'})
+@Injectable({ providedIn: 'root' })
 class TestProvider implements FeatureProvider {
   getFeatureList(): FeatureList {
     return testFeatureList;
@@ -30,7 +37,7 @@ class TestProvider implements FeatureProvider {
 }
 
 const testFeatureList: FeatureList = {
-  'a': true,
-  'b': false,
-  'c': true,
-}
+  a: true,
+  b: false,
+  c: true,
+};

@@ -2,7 +2,7 @@ import { Inject, Injectable } from '@angular/core';
 import { FeatureProvider, NGX_FEATURE_PROVIDER } from './feature-provider.token';
 import { map, Observable, of } from 'rxjs';
 import { FeatureList } from './models/feature-list';
-import { coerceObservable } from '@mikelgo/ng-types';
+import { coerceObservable } from '@code-workers.io/ng-types';
 
 /**
  * @internal
