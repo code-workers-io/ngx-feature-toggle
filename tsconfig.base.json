@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@code-workers-io/ngx-feature-toggle": [
+      "@code-workers.io/ngx-feature-toggle": [
         "libs/ngx-feature-toggle/src/index.ts"
       ]
     }
